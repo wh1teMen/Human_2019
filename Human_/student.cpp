@@ -28,7 +28,7 @@ string Student::GetSpecialization() {
 }
 void Student::FullStud() {
 	cout << "Имя студента: " << GetNameStud() << endl;
-	//cout << "Фамилия Студента: " << GetSurnameStud() << endl;
+	cout << "Фамилия Студента: " << GetSurnameStud() << endl;
 	cout << "Специальность: " << GetSpecialization() << endl;
 	cout << "Группа: " << GetGroup() << endl;
 }
@@ -40,11 +40,15 @@ string Student::GetSurnameStud() {
 }
 //пустой конструктор
 Student::Student() {}
+Student::Student(Human person, int Group, string Specialization)
+{
+}
 //конструктор с заполнением
-Student::Student(string name, int Group, string Specialization) {
-	this->name = name;
+Student::Student(Human name, int Group, string Specialization) {
+	this->surnameStud = name;
 	this->Group = Group;
 	this->Specialization = Specialization;
+
 	
 	
 }

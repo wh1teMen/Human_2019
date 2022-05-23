@@ -23,17 +23,18 @@ int main() {
 	
 	Student firstStud("oleg",123,"da");
 	//firstStud.FullStud();
-	Student twoStud("Alexandr", 1234, "programmer");
+	Student twoStud( men3, 1234, "programmer");
 	//#########################################################
 	//firstStud.FullStud();
 	//cout << twoStud.GetNameStud();
-	//twoStud.FullStud();
+	twoStud.FullStud();
+	
 
 	//#########################################################
-	Flat one(17, 191, "Ленина", 63.2);
+	/*Flat one(17, 191, "Ленина", 63.2);
 	twoStud.FullStud();
 	one.Full_Flat();
-	cout << one.GetMinAreaFlat();
+	cout << one.GetMinAreaFlat();*/
 
 
 
