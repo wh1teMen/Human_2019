@@ -5,10 +5,10 @@
 #include<time.h>;
 using namespace std;
 void Student::SetNameStud(string name) {
-	this->name = name;
+	person.SetName(name);
 }
 string Student::GetNameStud() {
-	return name;
+	return person.GetName();
 }
 //ввод группы
 void Student::SetGroup(int group) {
@@ -26,26 +26,34 @@ void Student::SetSpecialization(string specialization) {
 string Student::GetSpecialization() {
 	return Specialization;
 }
+//Полная информация о студенте
 void Student::FullStud() {
-	cout << "Имя студента: " << GetNameStud() << endl;
-	cout << "Фамилия Студента: " << GetSurnameStud() << endl;
+	cout << "Информация о студенте:\nИмя: " <<	GetNameStud()<< endl;
+	cout << "Фамилия: " << GetSurnameStud() << endl;
+	cout << "Отчество: " << GetPatronamicStud() << endl;
 	cout << "Специальность: " << GetSpecialization() << endl;
 	cout << "Группа: " << GetGroup() << endl;
 }
+//Фамилия студента
 void Student::SetSurnameStud(string surname) {
-	surnameStud.SetSurname(surname);
+	person.SetSurname(surname);
 }
 string Student::GetSurnameStud() {
-	return surnameStud.GetSurname();
+	return person.GetSurname();
+}
+//отчество студента
+void Student::SetPatronamicStud(string patronamic) {
+	person.SetPatronamic(patronamic);
+}
+string Student::GetPatronamicStud() {
+	return person.GetPatronamic();
 }
 //пустой конструктор
 Student::Student() {}
-Student::Student(Human person, int Group, string Specialization)
-{
-}
+
 //конструктор с заполнением
-Student::Student(Human name, int Group, string Specialization) {
-	this->surnameStud = name;
+Student::Student(Human person, int Group, string Specialization) {
+	this->person = person;
 	this->Group = Group;
 	this->Specialization = Specialization;
 

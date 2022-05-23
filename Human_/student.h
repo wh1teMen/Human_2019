@@ -10,7 +10,7 @@ public:
 	//пустой конструктор
 	Student();
 	//конструктор с заполнением
-	Student(Human person, int Group, string Specialization);
+	Student(Human name, int Group, string Specialization);
 
 
 	void SetNameStud(string name);
@@ -22,13 +22,15 @@ public:
 	void FullStud();
 	void SetSurnameStud(string surname);
 	string GetSurnameStud();
+	void SetPatronamicStud(string patronamic);
+	string GetPatronamicStud();
 	
 
 	
 
 private:
 	
-	Human surnameStud;
+	Human person;
 	int Group;
 	string Specialization;
 	

@@ -11,23 +11,20 @@ using namespace std;
 
 int main() {
 	system("chcp 1251>nul");
-	Human first;
-	Human two(21, "Alesha", "ivanov", "ivanovich");
+	/*Human first;
+	Human two(21, "Алексей", "Иванов", "Иванович");
 	Human men3(30, "Alexandr", "Belov", "Sergeevich");
-	//cout << two.Fullname();
-	//cout << men3.Fullname();
-	//men3.Full_info_person();
-
+	two.Full_info_person();
+	cout << endl;
+	men3.Full_info_person();
+	*/
 
 	//#########################################################
-	
-	Student firstStud("oleg",123,"da");
-	//firstStud.FullStud();
-	Student twoStud( men3, 1234, "programmer");
-	//#########################################################
-	//firstStud.FullStud();
-	//cout << twoStud.GetNameStud();
+	/*Student firstStud(men3, 551, "юрист");
+	Student twoStud(two, 442, "программист");
 	twoStud.FullStud();
+	cout << endl;
+	firstStud.FullStud();*/
 	
 
 	//#########################################################
