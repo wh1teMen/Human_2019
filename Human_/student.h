@@ -7,23 +7,32 @@ using namespace std;
 
 class Student {
 public:
-	//пустой конструктор
+	//конструкторы
 	Student();
-	//конструктор с заполнением
 	Student(Human name, int Group, string Specialization);
+	Student(Human name, int Group, string Specialization,const int studentMarkCount,const int*studentMarks);
+	//деструктор
+	~Student();
 
-
-	void SetNameStud(string name);
-	string GetNameStud();
-	void SetGroup(int group);
-	int GetGroup();
-	void SetSpecialization(string specialization);
-	string GetSpecialization();
-	void FullStud();
-	void SetSurnameStud(string surname);
-	string GetSurnameStud();
-	void SetPatronamicStud(string patronamic);
-	string GetPatronamicStud();
+	//ввод
+	void setNameStud(string name);
+	void setGroup(int group);
+	void setSpecialization(string specialization);
+	void setSurnameStud(string surname);
+	void setPatronamicStud(string patronamic);
+	void set_marks(int mark, int pos);
+	void set_countMarks(int count);
+	
+	
+	
+	//вывод
+	string getNameStud();
+	int getGroup();
+	string getSpecialization();
+	string getSurnameStud();
+	string getPatronamicStud();
+	void fullStud();
+	void akk();
 	
 
 	
@@ -33,7 +42,11 @@ private:
 	Human person;
 	int Group;
 	string Specialization;
+	int* marks=nullptr;
+	int countMarks = 0;
 	
 
 
 };
+
+
