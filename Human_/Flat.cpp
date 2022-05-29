@@ -64,28 +64,26 @@ void Flat:: sethumans(Human human, int index)
 }
 
 //Вывод
-int Flat::getHouseNumber() {
+int Flat::getHouseNumber()const {
 	return HousNumber;
 }
-string Flat:: getStritName() {
+string Flat:: getStritName()const {
 	return StritName;
 }
-double Flat:: getAreaFlat() {
+double Flat:: getAreaFlat()const {
 	return AreaFlat;
 }
-int Flat:: getNumberFlat() {
+int Flat:: getNumberFlat()const {
 	return NumberFlat;
 }
-double Flat:: getMinAreaFlat() {
+double Flat:: getMinAreaFlat()const {
 	return getAreaFlat() / 18;
 
 }
-int Flat::getcountHumans()
-{
+int Flat::getcountHumans()const{
 	return countHumans;
 }
-Human Flat:: gethumans(int index)
-{
+Human Flat:: gethumans(int index)const{
 	return humans[index];
 }
 void Flat::flatFull()

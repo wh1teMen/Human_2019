@@ -58,19 +58,19 @@ void Student::set_marks(int mark, int pos)
 	marks[pos] = mark;
 }
 //вывод
-string Student::getNameStud() {
+string Student::getNameStud()const {
 	return person.getName();
 }
-int Student::getGroup() {
+int Student::getGroup()const {
 	return Group;
 }
-string Student::getSpecialization() {
+string Student::getSpecialization()const {
 	return Specialization;
 }
-string Student::getSurnameStud() {
+string Student::getSurnameStud()const {
 	return person.getSurname();
 }
-string Student::getPatronamicStud() {
+string Student::getPatronamicStud()const {
 	return person.getPatronamic();
 }
 void Student::fullStud() {

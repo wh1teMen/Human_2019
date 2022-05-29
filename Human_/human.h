@@ -2,31 +2,30 @@
 #include<iostream>
 #include<string>
 #include <ctime>
+#include<Windows.h>
 
 using namespace std;
 class Human {
 public:
 	//Конструкторы
 	Human();
-	Human(int age, string name, string surname, string patronamic);
-	Human(int age,string name, string surname, string patronamic,int day,int mon,int year);
+	Human(string name, string surname, string patronamic,int day,int mon,int year);
 	//ввод 
-	void setAge(int Age);
 	void setName(string Name);
 	void setSurname(string Surname);
 	void setPatronamic(string Patronamic);
 	void set_birthday(int day, int month, int year);
 	
 	//вывод
-	int getAge();
+	int getAge()const;
 	string getName()const;
-	string getSurname();
-	string getPatronamic();
+	string getSurname()const;
+	string getPatronamic()const;
+	string getbirthday()const;
+	void birhaday();
 	string Fullname();
 	void full_info_person();
-	string getbirthday();
-	void birhaday();
-
+	
 
 private:
 	int age;
@@ -36,3 +35,4 @@ private:
 	tm birthday{0};
 
 };
+int yearNow();

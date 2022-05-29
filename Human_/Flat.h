@@ -22,13 +22,13 @@ public:
 	void sethumans(Human human, int index);
 	
 	//Вывод
-	int getHouseNumber(); 
-	string getStritName(); 
-	double getAreaFlat(); 
-	int getNumberFlat(); 
-	double getMinAreaFlat(); 
-	int getcountHumans();
-	Human gethumans(int index);
+	int getHouseNumber()const;
+	string getStritName()const;
+	double getAreaFlat()const;
+	int getNumberFlat()const;
+	double getMinAreaFlat()const;
+	int getcountHumans()const;
+	Human gethumans(int index)const;
 	void flatFull();
 	
 

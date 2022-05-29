@@ -1,18 +1,13 @@
 #include<iostream>
 #include<string>
 #include"human.h"
+#include<Windows.h>
+#include <ctime>
 using namespace std;
 //Human
 //Конструкторы
 Human::Human() {}
-Human::Human(int age, string name, string surname, string patronamic){
-	this->age = age;
-	this->name = name;
-	this->surname = surname;
-	this->patronamic = patronamic;
-}
-Human::Human(int age,string name, string surname, string patronamic, int day, int mon, int year) {
-	this->age = age;
+Human::Human(string name, string surname, string patronamic, int day, int mon, int year) {
 	this->name = name;
 	this->surname = surname;
 	this->patronamic = patronamic;
@@ -23,9 +18,6 @@ Human::Human(int age,string name, string surname, string patronamic, int day, in
 
 
 //ввод 
-void Human::setAge(int Age) {
-	this->age = Age;
-}
 void Human::setName(string Name) {
 	this->name = Name;
 }
@@ -44,16 +36,17 @@ void Human::set_birthday(int day, int month, int year)
 
 
 //вывод 
-int Human::getAge() {
-	return age;
+
+int Human::getAge()const{
+	return yearNow()- birthday.tm_year;
 }
 string Human::getName()const {
 	return name;
 }
-string Human::getSurname() {
+string Human::getSurname()const{
 	return surname;
 }
-string Human::getPatronamic() {
+string Human::getPatronamic()const {
 	return patronamic;
 }
 string Human::Fullname() {
@@ -62,15 +55,19 @@ string Human::Fullname() {
 	return str;
 }
 void Human::full_info_person() {
-	cout << "Возраст: " << getAge()<<endl;
+	cout << "Возраст: " << getAge()<<" года" << endl;
 	cout << "Имя: " << getName() << endl;
 	cout << "Фамилия: " << getSurname()<<endl;
 	cout << "Отчество: " << getPatronamic()<<endl;
 }
-string Human::getbirthday()
-{
+string Human::getbirthday()const{
 	return std::to_string(birthday.tm_mday) + "." + std::to_string(birthday.tm_mon) + "." + std::to_string(birthday.tm_year);
 }
 void Human::birhaday() {
 	cout << "День рождение: " << getbirthday() << endl;
+}
+int yearNow() {
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	return st.wYear;
 }

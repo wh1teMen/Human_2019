@@ -4,17 +4,17 @@
 #include"human.h"
 #include"student.h"
 #include"Flat.h"
-#include<ctime>
+
+
 using namespace std;
 int main() {
 	system("chcp 1251>nul");
 	system("title Домашняя работа по ООП №1 / Белов Александр Сергеевич / Группа БВ-111 ");
 	Human first;
-	Human two(21, "Алексей", "Иванов", "Иванович");
-	Human men3(30, "Александр_", "Белов_", "Сергеевич_");
-	Human men4(39,"Алексей", "Иванов", "Олегович", 14, 12, 1983);
+	Human two( "Алексей", "Иванов", "Иванович",23,04,1975);
+	Human men3( "Александр_", "Белов_", "Сергеевич_",1,12,1958);
+	Human men4("Алексей", "Иванов", "Олегович", 14, 12, 1983);
 	first.setName("Иван");
-	first.setAge(32);
 	first.setSurname("Королев");
 	first.setPatronamic("Дмитриевич");
 	first.set_birthday(17, 2, 1990);
@@ -57,9 +57,8 @@ int main() {
 	room2.setcountHumans(2);
 	room2.sethumans(men3,0);
 	room2.flatFull();
+	first.getAge();
 
-
-
-	system("pause>nul");
+	system("pause>nul");;
 	return 0;
 }

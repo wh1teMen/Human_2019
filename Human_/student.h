@@ -26,13 +26,13 @@ public:
 	
 	
 	//вывод
-	string getNameStud();
-	int getGroup();
-	string getSpecialization();
-	string getSurnameStud();
-	string getPatronamicStud();
+	string getNameStud()const;
+	int getGroup()const;
+	string getSpecialization()const;
+	string getSurnameStud()const;
+	string getPatronamicStud()const;
 	void fullStud();
-	void akk();
+	
 	
 
 	
